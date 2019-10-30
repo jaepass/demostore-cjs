@@ -4,11 +4,10 @@
   <!-- Header -->
   <store-header></store-header>
 
-
     <div class="container mx-auto px-4">
       <div class="flex mb-4">
         <div class="row">
-          <!-- :key is for Vue to keep track of items -->
+          <!-- :key is for Vue to keep track of items with ids -->
           <div class="col-md-6" v-for="product in products" :key="product.id" >
             <product :isInWishlist="isInWishlist(product)"
                       v-on:add-to-wishlist="addToWishlist(product)"
@@ -42,7 +41,8 @@ import Header from "@/components/Header.vue";
 import Footer from "@/components/Footer.vue";
 
 // Initialize store with public key
-// const myStore = new Commerce('pk_168757b95ff55c066b59b9e93c48a2b0e7bc1b97c798b', true);
+//const myStore = new Commerce('pk_168757b95ff55c066b59b9e93c48a2b0e7bc1b97c798b', true);
+
 
 export default {
   name: "app",
@@ -55,21 +55,33 @@ export default {
   data() {
     return {
       products,
+      //loading,
       wishlist: [],
     };
   },
+
   //   mounted() { 
   //     //When element is mounted, look up data with store instance key
   //     myStore.Products.list(function(resp){
   //         console.log(resp);
   //         this.products = resp.data
+  //         this.loading = false
   //         },
   //       function(error){
   //         //Error handler
   //         }
   //       );
-
   // },
+
+  // mounted() {
+  //   myStore.products.list()
+  //     .then((resp) => {
+  //       console.log(resp);
+  //       this.products = resp.data
+  //       this.loading = false
+  //     })
+  //     .catch(error => console.error(error));
+  // }
 
   //Declare action methods on object
   methods: {

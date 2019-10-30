@@ -2,10 +2,9 @@
 <template>
     <div class="card my-5">
         <div class="card-body">
-            <h5 class="text-center card-title">{{product.title}}</h5>
-            <p class="text-center text-muted card-text display-4">${{Number(product.price).toFixed()}}</p>
-            <button :disabled="isInWishlist" @click="$emit('add-to-wishlist',product)" class="btn btn-info form-control">
-                {{isInWishlist ? 'Added to wishlist': 'Add to Wishlist'}}
+            <h5 class="text-center card-title display-5">{{product.title}}</h5>
+            <p class="text-center text-muted card-text display-5">${{Number(product.price).toFixed()}}</p>
+            <button :disabled="isInWishlist" @click="$emit('add-to-wishlist',product)" class="btn btn-info form-control"><i class="fas fa-heart"></i>{{isInWishlist ? 'Added to wishlist': 'Add to Wishlist'}}
             </button>
         </div>
     </div>
@@ -19,10 +18,14 @@ export default{
 
 <style>
     button.btn{
-        background-color: pink;
+        background-color: transparent;
+        text-decoration: underline;
         border: none;
+        color: rgb(60, 60, 60);
     }
     button.btn:hover{
-        background-color: lightpink;
+        text-decoration: none;
+        background-color: transparent;
+        color: rgb(60, 60, 60);
     }
 </style>
