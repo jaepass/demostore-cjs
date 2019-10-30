@@ -5,15 +5,15 @@
         <img width="150px" src="@/assets/logo.png" alt="Tribal Logo">
       </div>
       
-      <nav>
+      <nav class="ml-auto">
         <img width="30px" src="@/assets/fav-icon.svg" alt="Tribal Logo">
         <img width="30px" src="@/assets/shopcart-icon.svg" alt="Tribal Logo">
       </nav>
-
     </header>
 
 
-    <div class="row">
+
+    <div class="container mx-auto py-10">
       <div class="col-md-7">
         <div class="row">
           <!-- :key is for Vue to keep track of items -->
@@ -34,7 +34,11 @@
   </div>
 </template>
 
+
+
 <script>
+
+
 // Importing in components and data
 import products from "@/products.json";
 import Product from "@/components/Product.vue";
@@ -93,14 +97,7 @@ body {
 }
 
 header {
-  
   display: flex;
 }
 
-nav{
-  
-  position: relative;
-  align-items: right;
-  display: flex;
-}
 </style>
