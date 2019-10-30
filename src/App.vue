@@ -3,6 +3,7 @@
     
   <!-- Header -->
   <store-header></store-header>
+  <store-hero></store-hero>
 
     <div class="container mx-auto px-4">
       <div class="flex mb-4">
@@ -12,6 +13,7 @@
             <product :isInWishlist="isInWishlist(product)"
                       v-on:add-to-wishlist="addToWishlist(product)"
                       :product="product"
+
             ></product>
               
           </div>
@@ -33,21 +35,27 @@
 
 
 <script>
-// Importing in components and mock data
+// Importing mock data
 import products from "@/products.json";
+// Importing components
 import Product from "@/components/Product.vue";
 import Wishlist from "@/components/Wishlist.vue";
 import Header from "@/components/Header.vue";
+import Hero from "@/components/Hero.vue";
 import Footer from "@/components/Footer.vue";
 
+//Import Commerce.js products
+//import { getProducts } from "@chec.io/commerce";
+
 // Initialize store with public key
-//const myStore = new Commerce('pk_168757b95ff55c066b59b9e93c48a2b0e7bc1b97c798b', true);
+// const myStore = new Commerce('pk_168757b95ff55c066b59b9e93c48a2b0e7bc1b97c798b', true);
 
 
 export default {
   name: "app",
   components: {
     'store-header': Header,
+    'store-hero': Hero,
     'store-footer': Footer,
     Product,
     Wishlist, 
@@ -81,7 +89,7 @@ export default {
   //       this.loading = false
   //     })
   //     .catch(error => console.error(error));
-  // }
+  // },
 
   //Declare action methods on object
   methods: {
