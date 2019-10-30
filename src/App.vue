@@ -1,20 +1,12 @@
 <template>
   <div class="container mt-4">
-    <header>
-      <div class="logo">
-        <img width="150px" src="@/assets/logo.png" alt="Tribal Logo">
-      </div>
-      
-      <nav class="ml-auto">
-        <img width="30px" src="@/assets/fav-icon.svg" alt="Tribal Logo">
-        <img width="30px" src="@/assets/shopcart-icon.svg" alt="Tribal Logo">
-      </nav>
-    </header>
+    
+  <!-- Header -->
+  <store-header></store-header>
 
 
-
-    <div class="container mx-auto py-10">
-      <div class="col-md-7">
+    <div class="container mx-auto px-4">
+      <div class="flex mb-4">
         <div class="row">
           <!-- :key is for Vue to keep track of items -->
           <div class="col-md-6" v-for="product in products" :key="product.id" >
@@ -26,23 +18,28 @@
           </div>
         </div>
       </div>
+
       <!-- Wishlist modal -->
       <div class="col-md-5 my-5">
-        <wishlist v-on:pay="pay()" v-on:remove-from-wishlist="removeFromWishlist($event)" :items="wishlist"></wishlist>
+        <wishlist v-on:remove-from-wishlist="removeFromWishlist($event)" :items="wishlist"></wishlist>
       </div>
     </div>
+
+     <!-- Header -->
+    <store-footer></store-footer>
+
   </div>
 </template>
 
 
 
 <script>
-
-
-// Importing in components and data
+// Importing in components and mock data
 import products from "@/products.json";
 import Product from "@/components/Product.vue";
 import Wishlist from "@/components/Wishlist.vue";
+import Header from "@/components/Header.vue";
+import Footer from "@/components/Footer.vue";
 
 // Initialize store with public key
 // const myStore = new Commerce('pk_168757b95ff55c066b59b9e93c48a2b0e7bc1b97c798b', true);
@@ -50,6 +47,8 @@ import Wishlist from "@/components/Wishlist.vue";
 export default {
   name: "app",
   components: {
+    'store-header': Header,
+    'store-footer': Footer,
     Product,
     Wishlist, 
   },
@@ -57,7 +56,6 @@ export default {
     return {
       products,
       wishlist: [],
-
     };
   },
   //   mounted() { 
@@ -72,6 +70,8 @@ export default {
   //       );
 
   // },
+
+  //Declare action methods on object
   methods: {
     addToWishlist(product) {
       this.wishlist.push(product);
@@ -94,10 +94,6 @@ export default {
 <style>
 body {
   background-color: #ffffff;
-}
-
-header {
-  display: flex;
 }
 
 </style>

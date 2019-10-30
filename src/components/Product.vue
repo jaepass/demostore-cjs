@@ -16,3 +16,13 @@ export default{
     props: ['product','isInWishlist']
 }
 </script>
+
+<style>
+    button.btn{
+        background-color: pink;
+        border: none;
+    }
+    button.btn:hover{
+        background-color: lightpink;
+    }
+</style>
