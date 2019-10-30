@@ -114,6 +114,11 @@ export default {
 <style>
 body {
   background-color: #ffffff;
+  font-family: 'Lato', sans-serif;
+}
+
+h1{
+  text-transform: uppercase;
 }
 
 </style>

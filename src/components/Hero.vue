@@ -2,7 +2,7 @@
     <div class="hero-wrapper">
         <header>
             
-            <div class="logo" >
+            <div class="logo" href="/">
                 <img width="175px" src="@/assets/logo.png" alt="Tribal Logo">
             </div>
             
@@ -13,12 +13,18 @@
             <div class="hero-bg"></div>
         </header>
 
-        <img width="675px" src="@/assets/hero-img.jpg" class="hero-img" alt="hero image">
+            <img width="675px" src="@/assets/hero-img.jpg" class="hero-img" alt="hero image">
 
-        <div class="hero-text">
-            <h1>Street</h1>
-            <h1>Runway</h1>
-            <h1>Chic</h1>
+            <div class="hero-text">
+                <h1>Stre<span>et</span></h1>
+                <h1>Runw<span>ay</span></h1>
+                <h1>Chic</h1>
+            </div>
+
+        <div class="shop-scroll">
+            <div class="shop-text">
+                <h2>shop</h2>
+            </div>
         </div>
 
     </div>
@@ -53,6 +59,7 @@ nav a img {
 
 .logo{
     padding: 30px 0 0 30px;
+    cursor: pointer;
 }
 
 .hero-img{
@@ -63,6 +70,10 @@ nav a img {
     top: 50%;
     transform: translateX(-50%);
 }
+
+/* .hero-img-text {
+    border: 1px solid blue;
+} */
 
 .hero-bg {
     position: absolute;
@@ -75,8 +86,32 @@ nav a img {
 
 .hero-text{
     position: absolute;
-    border: 1px solid blue;
-    top: 50%;
+    top: 60%;
+    left: 135px;
+    transform: translateY(-50%);
+    z-index: 999;
+    
+}
+
+.hero-text h1{
+    color: black;
+    font-weight: 700;
+    font-size: 60px;
+    letter-spacing: 25px;
+	mix-blend-mode: exclusion;
+    line-height: 90px;
+}
+
+.hero-text h1 span{
+    color: white;
+}
+
+.shop-scroll{
+    position: absolute;
+    bottom: 30px;
+    transform: translateY(-50%);
+    z-index: 999;
+    right: 50px;
 }
 
 </style>
