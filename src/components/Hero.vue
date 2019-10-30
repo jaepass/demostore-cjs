@@ -1,18 +1,21 @@
 <template>
     <div class="hero-wrapper">
         <header>
-        <div class="logo">
-            <img width="150px" src="@/assets/logo.png" alt="Tribal Logo">
-        </div>
-        
-        <nav class="ml-auto">
-            <img width="30px" src="@/assets/fav-icon.svg" alt="Tribal Logo">
-            <img width="30px" src="@/assets/shopcart-icon.svg" alt="Tribal Logo">
-        </nav>
+            
+            <div class="logo">
+                <img width="150px" src="@/assets/logo.png" alt="Tribal Logo">
+            </div>
+            
+            <nav class="ml-auto">
+                <img width="30px" src="@/assets/fav-icon.svg" alt="Tribal Logo">
+                <img width="30px" src="@/assets/shopcart-icon.svg" alt="Tribal Logo">
+            </nav>
+            <div class="hero-bg"></div>
         </header>
 
+        
         <img width="675px" src="@/assets/hero-img.jpg" class="hero-img" alt="hero image">
-        <div class="hero-bg"></div>
+        
     </div>
 </template>
 
@@ -25,22 +28,32 @@
 
 <style>
 
+.hero-wrapper {
+    border: 1px solid blue;
+    position: relative;
+}
+
 header{
     display: flex;
+    z-index: 999
+}
+
+nav{
+    z-index: 9999;
 }
 
 .hero-img{
-    position: absolute;
-    z-index: 999;
-    align-content: center;
-    margin: 0 auto;
+    position: relative;
+    z-index: 1;
 }
 
 .hero-bg {
-    position: relative;
+    position: absolute;
     height: 80vh;
-    width: 800px;
+    width: 50vw;
     background-color: #DBA28B;
+    display: flex;
+    right: 0;
 }
 
 </style>
