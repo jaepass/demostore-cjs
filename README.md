@@ -1,4 +1,4 @@
-# demostore-cjs
+# Demo Store build in Vuejs with Commerce.js API
 
 ## Project setup
 ```
