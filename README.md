@@ -1,4 +1,4 @@
-# Demo Store build in Vuejs with Commerce.js API
+# Demo Store built in Vuejs with Commerce.js API
 
 ## Project setup
 ```
