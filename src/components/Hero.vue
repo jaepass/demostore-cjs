@@ -2,20 +2,25 @@
     <div class="hero-wrapper">
         <header>
             
-            <div class="logo">
-                <img width="150px" src="@/assets/logo.png" alt="Tribal Logo">
+            <div class="logo" >
+                <img width="175px" src="@/assets/logo.png" alt="Tribal Logo">
             </div>
             
             <nav class="ml-auto">
-                <img width="30px" src="@/assets/fav-icon.svg" alt="Tribal Logo">
-                <img width="30px" src="@/assets/shopcart-icon.svg" alt="Tribal Logo">
+                <a href=""><img width="28px" src="@/assets/fav-icon.svg" alt="Tribal Logo"></a>
+                <a href=""><img width="28px" src="@/assets/shopcart-icon.svg" alt="Tribal Logo"></a>
             </nav>
             <div class="hero-bg"></div>
         </header>
 
-        
         <img width="675px" src="@/assets/hero-img.jpg" class="hero-img" alt="hero image">
-        
+
+        <div class="hero-text">
+            <h1>Street</h1>
+            <h1>Runway</h1>
+            <h1>Chic</h1>
+        </div>
+
     </div>
 </template>
 
@@ -29,7 +34,6 @@
 <style>
 
 .hero-wrapper {
-
     position: relative;
 }
 
@@ -40,7 +44,15 @@ header{
 
 nav{
     z-index: 999;
-    padding: 20px 20px 0 0;
+    padding: 30px 30px 0 0;
+}
+
+nav a img {
+    margin-left: 25px;
+}
+
+.logo{
+    padding: 30px 0 0 30px;
 }
 
 .hero-img{
@@ -59,6 +71,12 @@ nav{
     background-color: #DBA28B;
     display: flex;
     right: 0;
+}
+
+.hero-text{
+    position: absolute;
+    border: 1px solid blue;
+    top: 50%;
 }
 
 </style>
