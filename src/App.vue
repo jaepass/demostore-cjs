@@ -117,7 +117,7 @@ body {
   font-family: 'Lato', sans-serif;
 }
 
-h1{
+h1, h2, h3{
   text-transform: uppercase;
 }
 

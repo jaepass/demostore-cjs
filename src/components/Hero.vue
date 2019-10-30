@@ -22,9 +22,8 @@
             </div>
 
         <div class="shop-scroll">
-            <div class="shop-text">
-                <h2>shop</h2>
-            </div>
+            <h3>shop</h3>
+            <div class="shop-line"></div>
         </div>
 
     </div>
@@ -41,11 +40,12 @@
 
 .hero-wrapper {
     position: relative;
+    margin-bottom: 200px;
 }
 
 header{
     display: flex;
-    z-index: 999
+    z-index: 999;
 }
 
 nav{
@@ -108,10 +108,27 @@ nav a img {
 
 .shop-scroll{
     position: absolute;
-    bottom: 30px;
     transform: translateY(-50%);
     z-index: 999;
-    right: 50px;
+    right: 100px;
+    display: flex;
+    
+}
+
+.shop-scroll h3{
+    font-weight: 700;
+    letter-spacing: 22px;
+    bottom: 10px;
+    padding-top: 20px;
+    padding-right: 10px;
+}
+
+.shop-line{
+    height:120px;
+    border: 1px solid black;
+    display: flex; 
+    bottom: -20px;
+    position: relative;
 }
 
 </style>
