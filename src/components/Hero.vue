@@ -29,7 +29,7 @@
 <style>
 
 .hero-wrapper {
-    border: 1px solid blue;
+
     position: relative;
 }
 
@@ -39,12 +39,17 @@ header{
 }
 
 nav{
-    z-index: 9999;
+    z-index: 999;
+    padding: 20px 20px 0 0;
 }
 
 .hero-img{
     position: relative;
     z-index: 1;
+    display: flex;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%);
 }
 
 .hero-bg {
