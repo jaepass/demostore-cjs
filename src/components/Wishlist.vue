@@ -6,6 +6,7 @@ to send data back to parent component
 <template>
   <div>
     <ul class="list-group">
+      <div v-if="items.length >= 1"><h2>Wishlist</h2></div>
       <li class="list-group-item" v-for="item in items" :key="item.id">
         {{ item.name }} {{ item.price.formatted_with_symbol }}
         <button
