@@ -2,7 +2,7 @@
   <div class="storefront">
     
   <!-- Header -->
-  <store-header></store-header>
+  <!-- <store-header></store-header> -->
   <store-hero></store-hero>
 
     <div class="container mx-auto px-4">
@@ -46,7 +46,7 @@ import products from "@/products.json";
 // Importing components
 import Product from "@/components/Product.vue";
 import Wishlist from "@/components/Wishlist.vue";
-import Header from "@/components/Header.vue";
+// import Header from "@/components/Header.vue";
 import Hero from "@/components/Hero.vue";
 import Footer from "@/components/Footer.vue";
 
@@ -58,7 +58,7 @@ const myStore = new Commerce('pk_168757b95ff55c066b59b9e93c48a2b0e7bc1b97c798b',
 export default {
   name: "app",
   components: {
-    'store-header': Header,
+    // 'store-header': Header,
     'store-hero': Hero,
     'store-footer': Footer,
     Product,
@@ -68,7 +68,6 @@ export default {
     return {
       products,
       //loading,
-      urlImage: 'http://image.tmdb.org/t/p/w185/',
       wishlist: [],
     };
   },
@@ -82,8 +81,6 @@ export default {
         this.products = resp.data
         this.loading = false
       })
-      //.catch(error => console.error(error));
-      // Data is not retieved.
       .catch((error) => {
                 alert(error);
             });  
