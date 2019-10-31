@@ -1,8 +1,7 @@
 <template>
   <div class="storefront">
     
-  <!-- Header -->
-  <!-- <store-header></store-header> -->
+  <!-- Hero component contains header -->
   <store-hero></store-hero>
 
     <div class="container mx-auto px-4">
@@ -24,7 +23,6 @@
       <div class="col-md-5 my-5" id="wishlist">
         <wishlist v-on:remove-from-wishlist="removeFromWishlist($event)" :items="wishlist"></wishlist>
       </div>
-
     </div><!-- End of Individual Product cards -->
 
      <!-- Header -->
