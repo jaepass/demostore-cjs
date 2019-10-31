@@ -1,6 +1,6 @@
 <!-- Products in wishlist -->
 <template>
-    <div class="card my-5">
+    <div class="card my-5" style="height:31rem;">
         <div class="card-body">
             <img :src="product.media.source" :alt="product.name" class="card-img-top"/>
             <h4 class="title text-center card-title display-5">{{product.name}}</h4>
@@ -9,7 +9,7 @@
             <button :disabled="isInWishlist" @click="$emit('add-to-wishlist',product)" class="btn btn-info form-control"><i class="fas fa-heart"></i>{{isInWishlist ? 'Added to wishlist': 'Add to Wishlist'}}
             </button>
         </div>
-    </div>
+    </div><!-- End of card content -->
 </template>
 
 <script>
