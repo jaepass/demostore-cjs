@@ -21,7 +21,7 @@
       </div>
 
       <!-- Wishlist modal -->
-      <div class="col-md-5 my-5">
+      <div class="col-md-5 my-5" id="wishlist">
         <wishlist v-on:remove-from-wishlist="removeFromWishlist($event)" :items="wishlist"></wishlist>
       </div>
     </div>
@@ -67,10 +67,10 @@ export default {
     return {
       products,
       //loading,
+      urlImage: 'http://image.tmdb.org/t/p/w185/',
       wishlist: [],
     };
   },
-
 
 
 //When element is mounted, look up data with store instance key
@@ -82,6 +82,10 @@ export default {
         this.loading = false
       })
       //.catch(error => console.error(error));
+      // Data is not retieved.
+      .catch((error) => {
+                alert(error);
+            });  
   },
 
   //Declare action methods on object
