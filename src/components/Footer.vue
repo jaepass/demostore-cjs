@@ -4,6 +4,7 @@
         <img width="150px" src="@/assets/logo.png" alt="Tribal Logo">
     </div>
     <p>Demo Store for CJS</p>
+    <p>test</p>
     
     <nav class="ml-auto">
     
@@ -19,8 +20,8 @@
 </script>
 
 <style>
-header{
-
-    display: flex;
+footer{
+    height: 50vh;
+    background-color: black;
 }
 </style>
