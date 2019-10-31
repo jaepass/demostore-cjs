@@ -1,6 +1,6 @@
 <!-- Products in wishlist -->
 <template>
-    <div class="card my-5" style="height:31rem;">
+    <div class="card my-5" style="height:37rem;">
         <div class="card-body">
             <img :src="product.media.source" :alt="product.name" class="card-img-top"/>
             <h4 class="title text-center card-title display-5">{{product.name}}</h4>

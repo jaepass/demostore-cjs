@@ -9,7 +9,7 @@
       <div class="flex mb-4">
         <div class="row">
           <!-- :key is for Vue to keep track of items with ids -->
-          <div class="col-md" v-for="product in products" :key="product.id" >
+          <div class="col-sm-4" v-for="product in products" :key="product.id" >
             <product :isInWishlist="isInWishlist(product)"
                       v-on:add-to-wishlist="addToWishlist(product)"
                       :product="product"
