@@ -2,8 +2,10 @@
 <template>
     <div class="card my-5">
         <div class="card-body">
-            <h5 class="text-center card-title display-5">{{product.title}}</h5>
-            <p class="text-center text-muted card-text display-5">${{Number(product.price).toFixed()}}</p>
+            <!-- <div><img>{{product.media.image}}</img></div> -->
+            <h5 class="text-center card-title display-5">{{product.name}}</h5>
+            <p class="text-center card-title display-5">{{product.description}}</p>
+            <p class="text-center text-muted card-text display-5">{{product.price.formatted_with_symbol}}</p>
             <button :disabled="isInWishlist" @click="$emit('add-to-wishlist',product)" class="btn btn-info form-control"><i class="fas fa-heart"></i>{{isInWishlist ? 'Added to wishlist': 'Add to Wishlist'}}
             </button>
         </div>
