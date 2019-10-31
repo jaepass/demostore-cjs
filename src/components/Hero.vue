@@ -7,7 +7,7 @@
             </div>
             
             <nav class="ml-auto">
-                <a href="https://jaepass.github.io/#wishlist"><img width="28px" src="@/assets/fav-icon.svg" alt="wishlist icon"></a>
+                <a href="/demostore-cjs/#wishlist"><img width="28px" src="@/assets/fav-icon.svg" alt="wishlist icon"></a>
                 <a href=""><img width="28px" src="@/assets/shopcart-icon.svg" alt="Tribal Logo"></a>
             </nav>
             <div class="hero-bg"></div>
