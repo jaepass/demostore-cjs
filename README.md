@@ -1,5 +1,10 @@
 # Demo Store built in Vuejs with Commerce.js API
 
+![Demo Image]()
+
+### Visit Live Site
+https://jaepass.github.io/demostore-cjs/
+
 ## Project setup
 ```
 npm install
