@@ -35,6 +35,11 @@
 
 
 <script>
+
+//Import Commerce.js products
+import Commerce from '@chec.io/commerce';
+//Import Tailwind
+import '@/assets/css/tailwind.css'
 // Importing mock data
 import products from "@/products.json";
 // Importing components
@@ -44,11 +49,9 @@ import Header from "@/components/Header.vue";
 import Hero from "@/components/Hero.vue";
 import Footer from "@/components/Footer.vue";
 
-//Import Commerce.js products
-//import { getProducts } from "@chec.io/commerce";
 
 // Initialize store with public key
-// const myStore = new Commerce('pk_168757b95ff55c066b59b9e93c48a2b0e7bc1b97c798b', true);
+const myStore = new Commerce('pk_168757b95ff55c066b59b9e93c48a2b0e7bc1b97c798b', true);
 
 
 export default {
@@ -68,28 +71,18 @@ export default {
     };
   },
 
-  //   mounted() { 
-  //     //When element is mounted, look up data with store instance key
-  //     myStore.Products.list(function(resp){
-  //         console.log(resp);
-  //         this.products = resp.data
-  //         this.loading = false
-  //         },
-  //       function(error){
-  //         //Error handler
-  //         }
-  //       );
-  // },
 
-  // mounted() {
-  //   myStore.products.list()
-  //     .then((resp) => {
-  //       console.log(resp);
-  //       this.products = resp.data
-  //       this.loading = false
-  //     })
-  //     .catch(error => console.error(error));
-  // },
+
+//When element is mounted, look up data with store instance key
+  mounted() {
+    myStore.products.list()
+      .then((resp) => {
+        //console.log(resp);
+        this.products = resp.data
+        this.loading = false
+      })
+      //.catch(error => console.error(error));
+  },
 
   //Declare action methods on object
   methods: {
