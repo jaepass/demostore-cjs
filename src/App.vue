@@ -103,8 +103,7 @@ export default {
     },
     removeFromWishlist(product) {
       this.wishlist = this.wishlist.filter(item => item.id !== product.id);
-    }
-    
+    } 
   }
 };
 </script>
@@ -115,7 +114,7 @@ body {
   font-family: 'Lato', sans-serif;
 }
 
-h1, h2, h3{
+h1, h2, h3, h4{
   text-transform: uppercase;
 }
 
