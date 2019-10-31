@@ -52,7 +52,7 @@ export default{
 
     @media only screen and (max-width: 400px){
         .card{
-            height: 50rem;
+            height: 48rem;
         }
     }
 

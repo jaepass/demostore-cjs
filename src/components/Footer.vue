@@ -39,4 +39,25 @@
         letter-spacing: 2.75px;
         padding: 40px;
     }
+
+    @media only screen and (max-width: 400px){
+
+        footer{
+            width: 100vw;
+            
+        }
+        .footer-logo{
+            right: 0;
+            left: 30px;
+        }
+
+        .footer-logo img{
+            background-color: white;
+            padding: 17px;
+        }
+
+        .footer-txt{
+        padding-top: 100px;
+    }
+    }
 </style>
