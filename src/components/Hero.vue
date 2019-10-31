@@ -16,8 +16,8 @@
             <img width="675px" src="@/assets/hero-img.jpg" class="hero-img" alt="hero image">
 
             <div class="hero-text">
-                <h1>Stre<span>et</span></h1>
-                <h1>Runw<span>ay</span></h1>
+                <h1>Street</h1>
+                <h1>Runway</h1>
                 <h1>Chic</h1>
             </div>
 
@@ -90,13 +90,14 @@ nav a img {
     left: 135px;
     transform: translateY(-50%);
     z-index: 999;
-    
+    padding: 20px 20px 20px 30px;
+    background-color: black;
 }
 
 .hero-text h1{
-    color: black;
+    color: white;
     font-weight: 700;
-    font-size: 60px;
+    font-size: 45px;
     letter-spacing: 25px;
 	mix-blend-mode: exclusion;
     line-height: 90px;
