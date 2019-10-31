@@ -51,6 +51,8 @@ header{
 nav{
     z-index: 999;
     padding: 30px 30px 0 0;
+    position: fixed;
+    right: 0;
 }
 
 nav a img {
