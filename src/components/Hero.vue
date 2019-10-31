@@ -71,9 +71,6 @@ nav a img {
     transform: translateX(-50%);
 }
 
-/* .hero-img-text {
-    border: 1px solid blue;
-} */
 
 .hero-bg {
     position: absolute;
@@ -99,9 +96,9 @@ nav a img {
     font-weight: 700;
     font-size: 45px;
     letter-spacing: 25px;
-	mix-blend-mode: exclusion;
     line-height: 90px;
 }
+
 
 .hero-text h1 span{
     color: white;
@@ -113,7 +110,6 @@ nav a img {
     z-index: 999;
     right: 100px;
     display: flex;
-    
 }
 
 .shop-scroll h3{
@@ -130,6 +126,58 @@ nav a img {
     display: flex; 
     bottom: -20px;
     position: relative;
+}
+
+
+@media only screen and (max-width: 400px){
+
+    nav{
+        padding-top: 20px;
+    }
+
+    .hero-wrapper {
+        margin-bottom: 420px;
+    }
+
+    .hero-img{
+        width: 325px;
+        padding-top: 20px;
+    }
+
+    .hero-text{
+        position: absolute;
+        top: 68vh;
+        left: 25px;
+        padding: 20px 20px 20px 30px; 
+    }
+
+    .hero-text h1{
+        font-size: 25px;
+        letter-spacing: 18px;
+        line-height: 60px;
+    }
+
+    .logo {
+        padding-top: 20px;
+    }
+
+    .logo img {
+        width: 125px;
+    }
+
+    .shop-scroll{
+        top: 90vh;
+        right: 100px;
+    }
+
+    .shop-scroll h3{
+        font-size: 20px;
+        letter-spacing: 18px;
+    }
+
+    .shop-line{
+        height:80px;
+    }
 }
 
 </style>
