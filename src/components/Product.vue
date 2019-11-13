@@ -6,15 +6,18 @@
             <h4 class="title text-center card-title display-5">{{product.name}}</h4>
             <p class="description text-center card-text display-5" v-html="product.description"></p>
             <p class="text-center text-muted card-subtitle display-5 price">{{product.price.formatted_with_symbol}}</p>
-            <button :disabled="isInWishlist" @click="$emit('add-to-wishlist',product)" class="btn btn-info form-control"><img src="../assets/fav-icon.svg" class="fav-icon"/>{{isInWishlist ? 'Added to wishlist': 'Add to Wishlist'}}
-            </button>
+            <div class="add-btns">
+                <button :disabled="isInWishlist" @click="$emit('add-to-wishlist',product)" class="btn btn-info form-control"><img src="../assets/fav-icon.svg" class="fav-icon"/>{{isInWishlist ? 'Added to wishlist': 'Add to Wishlist'}}
+                </button>
+                <button :disabled="isInCart" @click="$emit('add-to-cart', product)" class="btn btn-info form-control">{{ isInCart ? 'Added to Cart' : 'Add to Cart' }}</button>
+            </div><!-- End of Adding btns -->
         </div>
     </div><!-- End of card content -->
 </template>
 
 <script>
 export default{
-    props: ['product','isInWishlist']
+    props: ['product', 'isInCart','isInWishlist']
 }
 </script>
 
@@ -31,6 +34,10 @@ export default{
     .card p{
         letter-spacing: 2.4px;
         padding-top: 5px;
+    }
+
+    .add-btns{
+        display: flex;
     }
 
     button.btn{
