@@ -45,8 +45,6 @@
 
 //Import Commerce.js products
 import Commerce from '@chec.io/commerce';
-// Importing mock data
-import products from "@/products.json";
 // Importing components
 import Product from "@/components/Product.vue";
 import Cart from "@/components/Cart.vue";
@@ -70,8 +68,7 @@ export default {
   },
   data() {
     return {
-      products,
-      //loading,
+      products: [],
       cart: [],
       wishlist: []
     };
